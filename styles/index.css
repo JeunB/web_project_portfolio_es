@@ -1,0 +1,93 @@
+/*===== CONFIGURACIÓN DE FUENTES LOCALES=====*/
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("fonts\OpenSans-Regular.woff2") format("woff2"),
+    url("fonts\OpenSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("fonts\OpenSans-Bold.woff2") format("woff2"),
+    url("fonts\OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("fonts\OpenSans-SemiBold.woff2") format("woff2"),
+    url("fonts\OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+}
+
+/* Fuente Archivo Black - Para títulos principales */
+@font-face {
+  font-family: "Archivo Black";
+  src:
+    url("./fonts/ArchivoBlack-Regular.woff2") format("woff2"),
+    url("./fonts/ArchivoBlack-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuración base del documento */
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5; /* Usando decimales como indica el proyecto */
+  color: #333;
+}
+
+/* ===== HEADER: Sección principal con información personal ===== */
+.header {
+  /* Contenedor principal del header */
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.header__container {
+  /* Layout principal del header con flexbox */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Contenido del lado izquierdo */
+.header__content {
+  /* Información personal y navegación */
+  flex: 1;
+  max-width: 600px;
+}
+
+.header__name {
+  /* Nombre principal con fuente Archivo Black */
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 400; /* Archivo Black ya es bold por defecto */
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  text-align: left;
+  color: #000;
+}
+
+.header__profession {
+  /* Profesión con fuente Open Sans */
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0;
+}
