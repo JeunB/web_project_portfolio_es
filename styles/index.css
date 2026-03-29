@@ -1,24 +1,24 @@
 /*===== CONFIGURACIÓN DE FUENTES LOCALES=====*/
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Open Sans";
   src:
-    url("fonts\OpenSans-Regular.woff2") format("woff2"),
-    url("fonts\OpenSans-Regular.woff") format("woff");
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Open Sans";
   src:
-    url("fonts\OpenSans-Bold.woff2") format("woff2"),
-    url("fonts\OpenSans-Bold.woff") format("woff");
+    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: "OpenSans";
+  font-family: "Open Sans";
   src:
-    url("fonts\OpenSans-SemiBold.woff2") format("woff2"),
-    url("fonts\OpenSans-SemiBold.woff") format("woff");
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
   font-weight: 600;
 }
 
@@ -26,8 +26,8 @@
 @font-face {
   font-family: "Archivo Black";
   src:
-    url("./fonts/ArchivoBlack-Regular.woff2") format("woff2"),
-    url("./fonts/ArchivoBlack-Regular.woff") format("woff");
+    url("../fonts/ArchivoBlack-Regular.woff2") format("woff2"),
+    url("../fonts/ArchivoBlack-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -42,23 +42,22 @@
 /* Configuración base del documento */
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 16px;
   line-height: 1.5; /* Usando decimales como indica el proyecto */
-  color: #333;
+  background-color: #000000;
 }
 
 /* ===== HEADER: Sección principal con información personal ===== */
 .header {
   /* Contenedor principal del header */
-  padding: 40px 0;
-  background-color: #fff;
+  padding: 80px 0 40px;
+  color: #ffffff;
 }
 
 .header__container {
   /* Layout principal del header con flexbox */
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,28 +65,67 @@ body {
 }
 
 /* Contenido del lado izquierdo */
-.header__content {
-  /* Información personal y navegación */
-  flex: 1;
-  max-width: 600px;
+.header__info {
+  /* Información personal */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 120px;
 }
 
 .header__name {
   /* Nombre principal con fuente Archivo Black */
   font-family: "Archivo Black", Arial, sans-serif;
-  font-size: 48px;
+  font-size: 72px;
   font-weight: 400; /* Archivo Black ya es bold por defecto */
-  line-height: 1.2;
-  margin: 0 0 8px 0;
+  line-height: 100%;
   text-align: left;
-  color: #000;
+  max-width: 793px;
+  max-height: 156px;
+  top: 89px;
+  letter-spacing: 0%;
 }
 
 .header__profession {
   /* Profesión con fuente Open Sans */
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1.3;
-  margin: 0 0;
+  line-height: 100%;
+  font-style: normal;
+  gap: 15px;
+  opacity: 0.8;
+  max-height: 25px;
+  max-width: 790px;
+}
+
+.header__description {
+  gap: 30px;
+}
+
+.header__photo {
+  /* Contenedor de la imagen */
+  width: 100%;
+  max-width: 387px;
+  flex-shrink: 0; /* Evita que se reduzca en flexbox */
+}
+
+.header__photo img {
+  /* Estilos para la imagen dentro del contenedor */
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Mantiene proporción y llena el contenedor */
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  list-style: none;
 }
