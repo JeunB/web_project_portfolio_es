@@ -1,3 +1,5 @@
+/*=================================1. ESTILOS BASE PARA DESKTOP=================================*/
+
 /*===== CONFIGURACIÓN DE FUENTES LOCALES=====*/
 @font-face {
   font-family: "Open Sans";
@@ -55,9 +57,9 @@ body {
 
 .header__container {
   /* Layout principal del header con flexbox */
-  max-width: 1280px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 2%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,7 +72,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-left: 120px;
+  margin-left: 9.3%; /* 120px de 1280 px*/
 }
 
 .header__name {
@@ -80,7 +82,7 @@ body {
   font-weight: 400; /* Archivo Black ya es bold por defecto */
   line-height: 100%;
   text-align: left;
-  max-width: 793px;
+  max-width: 60%; /*del contenedor padre*/
   max-height: 156px;
   top: 89px;
   letter-spacing: 0%;
@@ -96,7 +98,7 @@ body {
   gap: 15px;
   opacity: 0.8;
   max-height: 25px;
-  max-width: 790px;
+  max-width: 60%;
 }
 
 .header__description {
@@ -128,4 +130,48 @@ body {
   flex-wrap: wrap;
   align-items: flex-start;
   list-style: none;
+}
+
+/*================================= 2. Tablet (768px - 1023px)================================= */
+@media (max-width: 1023px) {
+  .header__name {
+    font-size: 48px;
+    max-width: 600px;
+  }
+
+  .header__container {
+    gap: 24px;
+  }
+}
+
+/*================================= 3. Móvil (hasta 767px)================================= */
+@media (max-width: 767px) {
+  .header__name {
+    font-size: 32px;
+  }
+
+  .header__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header__photo {
+    max-width: none; /*Quita la reestricción*/
+    width: 100%;
+  }
+
+  .header__photo img {
+    width: 100%;
+    height: 280px; /*Altura fija como especifica el brief*/
+    object-fit: cover;
+  }
+}
+
+/* =================================  3.1. Intermedio 655px - 767px =================================*/
+
+@media (max-width: 767px) and (min-width: 655px) {
+  .header__photo img {
+    height: 350px;
+    object-fit: contain; /*Para evitar recorte vertical*/
+  }
 }
