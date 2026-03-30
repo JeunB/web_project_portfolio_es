@@ -13,13 +13,20 @@
   <body>
     <!--HEADER: Sección principal con información personal y navegación-->
     <header class="header">
+      <!--Foto de perfil -->
+        <div class="header__photo">
+          <img src="./images/profile.jpg" alt="Foto de perfil" />
+        </div>
+      </div>
       <!--Contenedor principal del header-->
       <div class="header__container">
         <!--Información personal del lado izquierdo-->
         <div class="header__info">
-          <h1 class="header__name">Jeunette Berzunza Castillo</h1>
+          <h1 class="header__name">Jeunette Berzunza </h1>
           <p class="header__profession">
-            Desarrolladora Full-Stack Junior | TypeScript, React, Node.js
+            <span class="header__profession-title">Desarrolladora Full-Stack Junior</span>
+            <span class="header__profession-separator"> | </span>
+            <span class="header__profession-tech">TypeScript, React, Node.js</span>
           </p>
           <p class="header__description">
             Desarrolladora web junior con experiencia práctica creando
@@ -36,17 +43,13 @@
             <ul class="header__nav-list">
               <li><a href="#cv">Descargar CV</a></li>
               <li><a href="#projects">Enlace a GitHub</a></li>
-              <!-- *************Corregir esto para navegación externa*************** -->
+              <!-- *************Para navegación externa***************
+              <a href="https://jeunb.github.io/web_project_portfolio_es/" target="_blank" rel="noopener noreferrer">Enlace a GitHub</a></li>
+              -->
               <li><a href="#contact">Hablemos</a></li>
             </ul>
           </nav>
         </div>
-
-        <!--Foto de perfil -->
-        <div class="header__photo">
-          <img src="./images/profile.jpg" alt="Foto de perfil" />
-        </div>
-      </div>
     </header>
 
     <!-- Sección: Habilidades y herramientas-->
@@ -57,7 +60,7 @@
     </section>
 
     <!--FOOTER: Pie de página con información de contacto-->
-    <footer class="footer id" ="contact">
+    <footer class="footer" id="contact">
       <!--Enlace de contacto y redes sociales-->
     </footer>
   </body>
