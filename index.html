@@ -13,20 +13,19 @@
   <body>
     <!--HEADER: Sección principal con información personal y navegación-->
     <header class="header">
-      <!--Foto de perfil -->
-        <div class="header__photo">
-          <img src="./images/profile.jpg" alt="Foto de perfil" />
-        </div>
-      </div>
       <!--Contenedor principal del header-->
       <div class="header__container">
         <!--Información personal del lado izquierdo-->
         <div class="header__info">
-          <h1 class="header__name">Jeunette Berzunza </h1>
+          <h1 class="header__name">Jeunette Berzunza</h1>
           <p class="header__profession">
-            <span class="header__profession-title">Desarrolladora Full-Stack Junior</span>
+            <span class="header__profession-title"
+              >Desarrolladora Full-Stack Junior</span
+            >
             <span class="header__profession-separator"> | </span>
-            <span class="header__profession-tech">TypeScript, React, Node.js</span>
+            <span class="header__profession-tech"
+              >TypeScript, React, Node.js</span
+            >
           </p>
           <p class="header__description">
             Desarrolladora web junior con experiencia práctica creando
@@ -50,18 +49,114 @@
             </ul>
           </nav>
         </div>
+        <!--Foto de perfil -->
+        <div class="header__photo">
+          <img src="./images/profile.jpg" alt="Foto de perfil" />
+        </div>
+      </div>
     </header>
 
     <!-- Sección: Habilidades y herramientas-->
+    <section class="skills">
+      <div class="skills__container">
+        <h2 class="skills__title">Habilidades y herramientas</h2>
+
+        <ul class="skills__list">
+          <li class="skills__item">
+            <img src="./images/Group 120570.png" alt="HTML" />
+          </li>
+          <li class="skills__item">
+            <img src="./images/Group 2087326844.png" alt="CSS" />
+          </li>
+          <li class="skills__item">
+            <img src="./images/Group 120568.svg" alt="JavaScript" />
+          </li>
+          <li class="skills__item">
+            <img src="./images/Group 2087326846.png" alt="Git" />
+          </li>
+          <li class="skills__item">
+            <img src="./images/Group 2087326847.png" alt="GitHub" />
+          </li>
+          <li class="skills__item">
+            <img src="./images/Group 2087326848.png" alt="Figma" />
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Sección de proyectos-->
     <section class="projects" id="projects">
       <!--Galería de proyectos realizados-->
+      <div class="projects__container">
+        <h2 class="projects__title">Proyectos destacados</h2>
+
+        <div class="projects__grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card">
+            <img
+              class="project-card__image"
+              src="./images/project1.png"
+              alt="Proyecto cafetería"
+            />
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">Página web de una cafetería</h3>
+
+              <p class="project-card__description">
+                Desarrollo de una landing page responsiva para una cafetería
+                siguiendo un brief de diseño. Incluye estructura semántica,
+                maquetación con Flexbox, creación de secciones nuevas y un
+                formulario de contacto funcional.
+              </p>
+
+              <div class="project-card__links">
+                <a href="#" target="_blank">Demo en vivo</a>
+                <a href="#" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card">
+            <img
+              class="project-card__image"
+              src="./images/project2.png"
+              alt="Mi proyecto"
+            />
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">Mi proyecto</h3>
+
+              <p class="project-card__description">
+                Descripción del proyecto. Aquí puedes explicar qué hace, qué
+                tecnologías usaste y qué problema resuelve.
+              </p>
+
+              <div class="project-card__links">
+                <a href="#" target="_blank">Demo en vivo</a>
+                <a href="#" target="_blank">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!--FOOTER: Pie de página con información de contacto-->
     <footer class="footer" id="contact">
       <!--Enlace de contacto y redes sociales-->
+      <div class="footer__container">
+        <h2 class="footer__title">Contacto</h2>
+
+        <p class="footer__email">jeu.bc2022@gmail.com</p>
+
+        <ul class="footer__social">
+          <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="X">X</a></li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
