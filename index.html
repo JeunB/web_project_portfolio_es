@@ -159,10 +159,20 @@
 
               <p class="project-card__description">Descripción del proyecto.</p>
 
-              <div class="project-card__links">
-                <a href="#" target="_blank">Demo en vivo</a>
-                <a href="#" target="_blank">GitHub</a>
-              </div>
+              <div class="projects__links">
+                <!-- Demo en vivo (imagen completa como link) -->
+                 <a href="#" class="projects__link" target="_blank" rel="noopener noreferrer">
+                  <img
+                  src="./images/demo-link.png"
+                  alt="Demo en vivo del proyecto"
+                  class="projects__icon-link"/>
+                </a>
+                <!-- GitHub (icono + texto) -->
+                 <a href="#" class="projects__link projects__link--github" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/github.png" alt="" class="projects__icon"/>GitHub</a>
+
+                </a>
+                </div>
             </div>
           </article>
         </div>
@@ -175,15 +185,26 @@
       <div class="footer__container">
         <h2 class="footer__title">Contacto</h2>
 
-        <p class="footer__email">jeu.bc2022@gmail.com</p>
+        <a href="mailto:jeu.bc2022@gmail.com" class="footer__email">jeu.bc2022@gmail.com</a>
 
-        <ul class="footer__social">
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">X</a></li>
-        </ul>
+       <div class="footer__socials">
+        <a href="#" class="footer__social-link">
+          <img src="./images/in-icon.png" class="footer__social-icon" />
+        </a>
+
+        <a href="#" class="footer__social-link">
+          <img src="./images/fb-icon.png" class="footer__social-icon" />
+        </a>
+
+        <a href="#" class="footer__social-link">
+          <img src="./images/ig-icon.png" class="footer__social-icon" />
+        </a>
+
+        <a href="#" class="footer__social-link">
+          <img src="./images/x-icon.png" class="footer__social-icon" />
+        </a>
       </div>
+    </div>
     </footer>
   </body>
 </html>
