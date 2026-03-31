@@ -136,15 +136,212 @@ body {
 /* Navegación */
 .header__nav {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .header__nav-list {
   display: flex;
-  gap: 16px;
+  gap: 30px;
+  padding: 0;
   flex-wrap: wrap;
   align-items: flex-start;
   list-style: none;
+}
+/* Links */
+.header__nav-list a {
+  text-decoration: none; /* quitamos subrayado default */
+  font-size: 18px;
+  color: #ffffff;
+  opacity: 1;
+
+  /* Subrayado con background */
+  background-image: linear-gradient(90deg, #4c1a97 0%, #6d6dff 100%);
+  background-size: 100% 3px; /* ancho total, altura de línea */
+  background-position: 0 100%; /* abajo */
+  background-repeat: no-repeat;
+  padding-bottom: 6px; /* espacio para que no choque con el texto */
+  transition: opacity 0.3s ease;
+}
+
+/* Hover*/
+
+.header__nav-list a:hover {
+  opacity: 0.5;
+}
+
+/* ========================SKILLS================================ */
+
+.skills {
+  padding: 80px 0;
+  color: #ffffff;
+}
+
+/* Contenedor alineado igual que header y projects */
+.skills__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 8.33%; /* ≈ 120px */
+  padding-right: 8.33%;
+}
+
+/* Título */
+.skills__title {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+/* Lista de íconos */
+.skills__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* distribuye como en Figma */
+  list-style: none;
+  flex-wrap: nowrap; /* en desktop NO se rompen */
+}
+
+/* Cada icono */
+.skills__list li {
+  flex: 1; /* clave */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen del icono */
+.skills__list img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* ======================== PROJECTS ======================== */
+
+.projects {
+  padding: 80px 0; /* mismo ritmo vertical que otras secciones */
+  color: #ffffff;
+}
+
+/* Contenedor alineado con header y skills */
+.projects__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 8.33%; /* ≈ 120px */
+  padding-right: 8.33%;
+}
+
+/* Título */
+.projects__title {
+  font-family: "Archivo Black", Arial, sans-serif;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+/* 🔥 GRID DE TARJETAS */
+.projects__grid {
+  display: grid;
+
+  /* 2 columnas iguales */
+  grid-template-columns: repeat(2, 1fr);
+
+  /* espacio entre tarjetas */
+  gap: 40px;
+}
+/*  IMAGEN  */
+
+.project-card__image-wrapper {
+  position: relative; /*necesario para posicionar íconos encima */
+}
+
+/* Imagen */
+.project-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*  ICONOS SOBRE IMAGEN */
+.project-card__icons {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+
+  display: flex;
+  gap: 8px;
+}
+
+/* cada icono */
+.project-card__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/*  CONTENIDO  */
+
+.project-card__content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+/* título */
+.project-card__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* descripción */
+.project-card__description {
+  font-size: 18px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* LINKS  */
+
+.projects__links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Base para todos los links */
+.projects__link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.projects__link:hover {
+  opacity: 0.5;
+}
+
+/*Estilo específico: Demo (imagen completa)*/
+
+.projects__link--demo {
+  display: inline-block; /* importante para imagen completa */
+}
+
+.projects__icon-link {
+  width: 120px; /* ajusta a tu diseño */
+  height: auto;
+  display: block; /* evita espacio raro debajo */
+}
+
+/*Estilo específico: GitHub (icono + texto)*/
+.projects__link--github {
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 60%;
+}
+
+.projects__icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 /*================================= 2. Tablet (768px - 1023px)================================= */
@@ -234,4 +431,14 @@ body {
     display: block;
     text-align: left;
   }
+}
+
+.skills__title {
+  font-size: 28px;
+}
+
+.skills__list {
+  flex-wrap: wrap; /* aquí SÍ bajan */
+  justify-content: center;
+  gap: 30px;
 }
