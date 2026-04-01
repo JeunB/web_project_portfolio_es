@@ -1,5 +1,3 @@
-/*=================================1. ESTILOS BASE PARA DESKTOP=================================*/
-
 /*===== CONFIGURACIÓN DE FUENTES LOCALES=====*/
 @font-face {
   font-family: "Open Sans";
@@ -33,6 +31,7 @@
   font-weight: 400;
   font-style: normal;
 }
+/*=================================1. ESTILOS BASE PARA DESKTOP=================================*/
 
 /* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
 * {
@@ -48,7 +47,7 @@ body {
   background-color: #000000;
 }
 
-/* ===== HEADER: Sección principal con información personal ===== */
+/* ========================= HEADER ============================== */
 .header {
   padding: 80px 0 40px;
   color: #ffffff;
@@ -132,25 +131,46 @@ body {
   content: "";
   position: absolute;
 
-  width: 420px;
-  height: 420px;
+  width: 500px;
+  height: 500px;
 
-  bottom: -120px;
+  bottom: -100px;
   left: 50%;
   transform: translateX(-50%);
 
   /* Gradiente tipo luz */
   background: radial-gradient(
     circle,
-    rgba(109, 109, 255, 0.8) 0%,
-    rgba(109, 109, 255, 0.4) 40%,
-    /* centro brillante */ rgba(109, 109, 255, 0) 70%
+    rgba(109, 109, 255, 1) 0%,
+    /* 🔥 más brillante */ rgba(109, 109, 255, 0.6) 30%,
+    rgba(109, 109, 255, 0.2) 55%,
+    /* centro brillante */ rgba(109, 109, 255, 0) 75%
   ); /* se desvanece */
 
-  filter: blur(120px); /*  suavidad tipo Figma */
-  opacity: 0.7;
+  filter: blur(90px); /* 🔥 menos blur = más visible */
+  opacity: 1; /* 🔥 más fuerte */
 
   z-index: -1; /* detrás de la imagen */
+}
+
+.header__photo::after {
+  content: "";
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: 0;
+  left: 60%;
+
+  background: radial-gradient(
+    circle,
+    rgba(76, 26, 151, 0.6) 0%,
+    rgba(76, 26, 151, 0) 70%
+  );
+
+  filter: blur(100px);
+  z-index: -1;
 }
 
 .header__photo img {
@@ -404,8 +424,8 @@ body {
   content: "";
   position: absolute;
 
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
 
   /* 🎯 CENTRADO PERFECTO */
   left: calc(50% - 150px);
@@ -419,6 +439,8 @@ body {
   );
 
   filter: blur(120px);
+  opacity: 1;
+
   z-index: 0;
 }
 
@@ -495,7 +517,7 @@ body {
 }
 
 /*================================= 2. Tablet (768px - 1023px)================================= */
-@media (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .header__container {
     margin: 0 auto;
     flex-direction: row;
@@ -542,9 +564,47 @@ body {
   .header__profession-separator {
     display: none;
   }
+
+  .projects__container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card__content {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .project-card__title {
+    font-size: 24px;
+  }
+
+  .project-card__description {
+    font-size: 18px;
+  }
+
   .projects__grid {
     grid-template-columns: 1fr; /* una columna */
-    gap: 30px;
+    gap: 40px;
+  }
+
+  .project-card__image-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+
+  .project-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .projects__links {
+    gap: 16px;
+    margin-top: 12px;
   }
 }
 
@@ -597,8 +657,10 @@ body {
   }
 
   .header__nav-list {
-    display: block;
-    text-align: left;
+    display: flex;
+    flex-direction: column; /* 🔥 vertical */
+    gap: 35px; /* 🔥 espacio entre links */
+    align-items: flex-start;
   }
 }
 
@@ -629,7 +691,6 @@ body {
 }
 
 .project-card__image-wrapper {
-  height: 160px; /* ajusta según tu diseño */
   overflow: hidden; /* 🔥 importante */
 }
 
