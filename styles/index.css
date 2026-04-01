@@ -278,6 +278,24 @@ body {
 
 .project-card__image-wrapper {
   position: relative; /*necesario para posicionar íconos encima */
+  aspect-ratio: 16 / 9; /* 🔥 controla proporción */
+  overflow: hidden;
+}
+/*******Crear el VELO*********/
+
+.project-card__image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* 🔥 cubre TODO el contenedor */
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    /* transparente arriba */ rgba(0, 0, 0, 0.5) 75%,
+    /* sombra media */ rgba(0, 0, 0, 0.8) 100% /* oscuro abajo */
+  );
+
+  z-index: 1;
 }
 
 /* Imagen */
@@ -285,6 +303,8 @@ body {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  z-index: 0;
 }
 
 /*  ICONOS SOBRE IMAGEN */
@@ -292,9 +312,9 @@ body {
   position: absolute;
   bottom: 12px;
   left: 10px;
-
   display: flex;
   gap: 8px;
+  z-index: 2; /* 🔥 clave */
 }
 
 /* cada icono */
@@ -602,6 +622,33 @@ body {
 
 .project-card__content {
   padding: 16px;
+}
+
+.project-card__description {
+  font-size: 16px;
+}
+
+.project-card__image-wrapper {
+  height: 160px; /* ajusta según tu diseño */
+  overflow: hidden; /* 🔥 importante */
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%; /* 🔥 importante */
+  object-fit: cover; /* 🔥 aquí ocurre la magia */
+  object-position: center; /* centra el recorte */
+}
+
+.project-card__icons {
+  bottom: 8px;
+  left: 8px;
+  gap: 6px;
+}
+
+.project-card__icons img {
+  width: 20px;
+  height: 20px;
 }
 
 .footer {
