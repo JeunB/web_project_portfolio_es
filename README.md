@@ -70,11 +70,18 @@ Los efectos de halo utilizan gradientes radiales con múltiples capas:
 - Fondo: #000000 (Negro absoluto)
 - Texto: #ffffff (Blanco puro)
 
-# 7.Mejoras Futuras
+# 7.Comentarios
+
+Los documentos HTML y CSS se integran con comentarios detallados que pueden llegar a ser muy útiles para un desarrollador junior.
+Se usan tanto para distinguir secciones de la página como para detallar la razón del uso de un valor o propiedad específica.
+
+Estos comentarios documentan decisiones de diseño, técnicas CSS avanzadas y la estructura semántica del HTML.
+
+# 8.Mejoras Futuras
 
 ### Próximas Implementaciones
 
 - JavaScript - Interactividad (próximamente)
-- Optimización de halos - Fijar efectos de luz completamente a las secciones
+- Optimización de halos - Fijar efectos de luz completamente a las secciones.
 - Animaciones CSS - Transiciones suaves entre secciones
-- Formulario de contacto funcional - Integración con servicios de email
+- Probablemente, un formulario de contacto funcional - Integración con servicios de email.
